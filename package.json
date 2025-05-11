@@ -1,5 +1,5 @@
 {
-  "name": "simple-csrf",
+  "name": "origin-csrf",
   "description": "Cookie session management for Bun",
   "version": "1.0.7",
   "module": "index.ts",
@@ -8,16 +8,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aabccd021/simple-csrf.git"
+    "url": "git+https://github.com/aabccd021/origin-csrf.git"
   },
   "keywords": ["bun", "web", "cookie", "session"],
   "bugs": {
-    "url": "https://github.com/aabccd021/simple-csrf/issues"
+    "url": "https://github.com/aabccd021/origin-csrf/issues"
   },
   "scripts": {
     "postinstall": "cd $(dirname $npm_package_json) && nix run .#bun2nix -- --output-file bun.nix"
   },
-  "homepage": "https://github.com/aabccd021/simple-csrf#readme",
+  "homepage": "https://github.com/aabccd021/origin-csrf#readme",
   "files": ["index.ts"],
   "devDependencies": {
     "@types/bun": "latest"
