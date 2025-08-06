@@ -53,17 +53,6 @@
         touch $out
       '';
 
-      biome = pkgs.runCommand "biome" { } ''
-        cp -L ${./biome.json} ./biome.json
-        cp -L ${./index.ts} ./index.ts
-        cp -L ${./index.test.ts} ./index.test.ts
-        cp -L ${./package.json} ./package.json
-        cp -L ${./tsconfig.json} ./tsconfig.json
-        cp -Lr ${nodeModules}/node_modules ./node_modules
-        ${pkgs.biome}/bin/biome check --vcs-enabled=false --error-on-warnings
-        touch $out
-      '';
-
       test = pkgs.runCommand "test" { } ''
         cp -L ${./index.ts} ./index.ts
         cp -L ${./index.test.ts} ./index.test.ts
@@ -113,7 +102,6 @@
         formatter = formatter;
         allInputs = collectInputs inputs;
         tsc = tsc;
-        biome = biome;
         nodeModules = nodeModules;
         bun2nix = inputs.bun2nix.packages.x86_64-linux.default;
       };
