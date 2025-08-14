@@ -1,4 +1,7 @@
-export function isRequestSafe(req: Request): boolean {
+/**
+ * @type {import("./index").isSafe}
+ */
+export const isSafe = (req) => {
   if (!["POST", "PUT", "PATCH", "DELETE"].includes(req.method)) {
     return true;
   }
