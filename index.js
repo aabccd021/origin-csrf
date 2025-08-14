@@ -13,4 +13,4 @@ export const isSafe = (req) => {
   }
 
   return new URL(originHeader).host === hostHeader;
-}
+};
