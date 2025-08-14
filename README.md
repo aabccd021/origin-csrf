@@ -7,7 +7,7 @@ Simple CSRF request validation for JavaScript.
 `tiny-origin-csrf` provides a utility to check if an HTTP request is considered "safe" from a CSRF (Cross-Site Request Forgery) perspective, based on the HTTP method and the relationship between the `Origin` and `Host` headers.
 
 - **Safe methods** (`GET`, `HEAD`, `OPTIONS`): Always considered safe.
-- **Unsafe methods** (`POST`, `PUT`, `PATCH`, `DELETE`): Only considered safe if the `Origin` header matches the `Host` header exactly.
+- **Unsafe methods** (`POST`, `PUT`, `PATCH`, `DELETE`): Only considered safe if the `Origin` header matches the `Host` header.
 
 ## Installation
 
@@ -35,22 +35,6 @@ if (isSafe(req)) {
 } else {
   // Block or reject the request as potentially unsafe
 }
-```
-
-## Example
-
-See [index.test.js](./index.test.js) for usage examples and edge cases.
-
-## Install
-
-This is a single-file utility. Copy `index.js` and `index.d.ts` into your project, or install via your preferred package manager if published.
-
-## Test
-
-Run the test file with your JavaScript runtime (for example, Node.js >= 18):
-
-```bash
-node index.test.js
 ```
 
 ## LICENCE
